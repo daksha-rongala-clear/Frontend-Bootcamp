@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Masterclass | Tailwind Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="font-outfit bg-bg-dark text-slate-100 min-h-screen">
+    <div class="grid grid-cols-1 md:grid-cols-[250px_1fr] grid-rows-[auto_1fr_auto] min-h-screen">
+        <!-- Header -->
+        <header class="md:col-span-2 bg-primary p-8 text-center border-b-2 border-accent sticky top-0 z-50">
+            <h1
+                class="text-4xl md:text-5xl font-extrabold tracking-tighter bg-linear-to-r from-white to-accent bg-clip-text text-transparent">
+                Grid Showcase
+            </h1>
+        </header>
+
+        <!-- Sidebar -->
+        <aside class="bg-sidebar p-8 h-auto md:h-[calc(100vh-104px)] md:sticky md:top-[104px]">
+            <nav>
+                <ul class="flex md:block justify-around md:space-y-6">
+                    <li><a href="#home"
+                            class="text-lg font-semibold transition-all hover:text-accent hover:translate-x-2 block">Home</a>
+                    </li>
+                    <li><a href="#blog"
+                            class="text-lg font-semibold transition-all hover:text-accent hover:translate-x-2 block">Blog</a>
+                    </li>
+                    <li><a href="#contact"
+                            class="text-lg font-semibold transition-all hover:text-accent hover:translate-x-2 block">Contact</a>
+                    </li>
+                    <li><a href="#about"
+                            class="text-lg font-semibold transition-all hover:text-accent hover:translate-x-2 block">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content p-8 md:p-16 space-y-24">
+            <!-- Home Section -->
+            <section id="home" class="scroll-mt-[120px] py-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-5xl font-bold text-accent">Welcome to the Future</h2>
+                    <p class="text-lg text-slate-300 leading-relaxed">
+                        Experience the power of CSS Grid through Tailwind CSS v4. This entire layout is built without a
+                        single custom CSS property in a separate file, demonstrating the utility-first precision of
+                        modern styling.
+                    </p>
+                </div>
+                <div class="relative group">
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-accent to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200">
+                    </div>
+                    <img src="assets/hero.png" alt="Abstract Hero Image"
+                        class="relative w-full rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
+                </div>
+            </section>
+
+            <!-- Blog Section -->
+            <section id="blog" class="scroll-mt-[120px] py-8 space-y-8">
+                <h2 class="text-3xl font-bold">Latest Blog Posts</h2>
+                <div class="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-8">
+                    <div
+                        class="aspect-square rounded-2xl transition-all hover:-translate-y-2 hover:shadow-2xl cursor-pointer bg-[#ff6b6b]">
+                    </div>
+                    <div
+                        class="aspect-square rounded-2xl transition-all hover:-translate-y-2 hover:shadow-2xl cursor-pointer bg-[#4ecdc4]">
+                    </div>
+                    <div
+                        class="aspect-square rounded-2xl transition-all hover:-translate-y-2 hover:shadow-2xl cursor-pointer bg-[#ffe66d]">
+                    </div>
+                    <div
+                        class="aspect-square rounded-2xl transition-all hover:-translate-y-2 hover:shadow-2xl cursor-pointer bg-[#1a535c]">
+                    </div>
+                    <div
+                        class="aspect-square rounded-2xl transition-all hover:-translate-y-2 hover:shadow-2xl cursor-pointer bg-[#f7fff7]">
+                    </div>
+                    <div
+                        class="aspect-square rounded-2xl transition-all hover:-translate-y-2 hover:shadow-2xl cursor-pointer bg-[#ff9f1c]">
+                    </div>
+                    <div
+                        class="aspect-square rounded-2xl transition-all hover:-translate-y-2 hover:shadow-2xl cursor-pointer bg-[#2ec4b6]">
+                    </div>
+                    <div
+                        class="aspect-square rounded-2xl transition-all hover:-translate-y-2 hover:shadow-2xl cursor-pointer bg-[#e71d36]">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="scroll-mt-[120px] py-8 space-y-6">
+                <h2 class="text-3xl font-bold text-accent">Contact Us</h2>
+                <div class="space-y-2 text-slate-300">
+                    <p><strong class="text-white">Email:</strong> hello@gridmasters.com</p>
+                    <p><strong class="text-white">Phone:</strong> +1 (555) 123-4567</p>
+                    <p><strong class="text-white">Address:</strong> 123 Grid Lane, Layout City, Webland</p>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="scroll-mt-[120px] py-8 space-y-6">
+                <h2 class="text-3xl font-bold text-accent">About Grid Masters</h2>
+                <p class="text-slate-300 leading-relaxed max-w-3xl">
+                    We are a boutique design agency specializing in pure CSS layouts. Our philosophy is rooted in
+                    simplicity, performance, and the semantic web. By leveraging Tailwind CSS, we build websites that
+                    are fast, accessible, and beautiful.
+                </p>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="md:col-span-2 bg-primary p-8 text-center text-sm text-slate-500 border-t border-slate-800">
+            <p>&copy; 2026 Grid Masters. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
